@@ -1,0 +1,8 @@
+<div *ngIf="user" class="admin-user-card">
+    <ngx-avatar [name]="user.fullName" bgColor="#044C9C" size="80"></ngx-avatar>
+    <div class="info">
+        <b>{{user.fullName}}</b>
+        <small>{{user.email}}</small>
+        <h3>Administrator</h3>
+    </div>
+</div>

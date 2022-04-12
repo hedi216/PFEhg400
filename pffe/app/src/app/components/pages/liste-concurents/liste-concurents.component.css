@@ -1,0 +1,28 @@
+.my-card {
+  margin: 20px;
+  border-radius: 8px;
+  border: 1px whitesmoke solid;
+  width: 350px;
+  height: 280px;
+}
+
+.mat-card-content img {
+  padding-top: 18px;
+  width: 150px;
+}
+.mat-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  width: 300px !important;
+}
+button {
+  margin-top: 18px;
+}
+.grid_item {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-left: 90px;
+}

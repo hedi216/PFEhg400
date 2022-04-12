@@ -1,0 +1,14 @@
+<div class="grid_item">
+
+    <mat-card class="my-card" *ngFor="let book of apiCompititors">
+        <mat-card-content>
+            <img mat-card-image src="{{book.link_logo}}" alt="proxym">
+            <mat-card-title> {{book.nom_societe}}</mat-card-title>
+            <button mat-raised-button color="primary">
+                <mat-icon>dashboard</mat-icon>
+                Visualiser dashboard
+            </button>
+        </mat-card-content>
+    </mat-card>
+
+</div>

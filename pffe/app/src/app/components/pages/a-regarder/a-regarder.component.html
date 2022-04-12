@@ -1,0 +1,13 @@
+<mat-card *ngFor="let like of likespost" class="posts-container">
+    <img *ngIf="like.type == 'Image'" mat-card-image [src]="like.post_link">
+    <video *ngIf="like.type == 'Video'" mat-card-image controls>
+        <source [src]="like.post_link" type="video/mp4">
+    </video>
+    <mat-card-content>
+        <p>{{like.post_text }}</p>
+        <a *ngIf="like.type == 'Article'" [href]="like.post_link" target="_blank">Lire </a>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)="deletelikes(like._id.$oid)">Supprimer</button>
+    </mat-card-actions>
+</mat-card>

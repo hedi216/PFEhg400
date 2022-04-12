@@ -1,0 +1,35 @@
+.activite {
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 98%;
+  height: 80px;
+  position: sticky !important;
+  top: 0;
+}
+.types-donnees {
+  margin-right: 20px;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.types-donnees button {
+  width: 100%;
+}
+.btn-search {
+  display: flex;
+  justify-content: center;
+}
+.posts-container {
+  width: 500px;
+  margin-top: 50px;
+  margin-left: 25%;
+}
+
+p {
+  line-break: anywhere;
+}
+
+.filtring {
+  display: flex;
+  justify-content: center;
+}

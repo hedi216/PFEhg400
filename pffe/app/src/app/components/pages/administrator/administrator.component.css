@@ -1,0 +1,23 @@
+.adminstrator-container {
+  height: 100%;
+}
+
+mat-drawer {
+  width: 300px;
+  overflow: hidden;
+  padding: 24px;
+}
+
+mat-drawer img {
+  width: 200px;
+}
+.btn-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px;
+}
+button {
+  width: 100%;
+}

@@ -1,0 +1,40 @@
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  background-color: white;
+  border-bottom: 1px rgb(216, 216, 216) solid;
+}
+h1 {
+  margin: 0;
+}
+
+.table-container {
+  margin: 32px 24px 12px 24px;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px rgb(216, 216, 216) solid;
+}
+
+table {
+  width: 100%;
+  box-shadow: none;
+  background: transparent;
+}
+th {
+  color: #044c9c;
+}
+tr {
+  height: 72px !important;
+}
+
+table button {
+  margin-right: 12px;
+}
+.actions {
+  width: 300px !important;
+}

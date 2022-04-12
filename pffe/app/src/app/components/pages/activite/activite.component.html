@@ -1,0 +1,62 @@
+<form class="activite" [formGroup]="searchForm" (submit)="searchPosts()">
+    <div class="filtring">
+        <div class=" types-donnees">
+            <mat-form-field appearance="fill">
+                <mat-label>type de données</mat-label>
+                <select formControlName="type" matNativeControl required>
+                    <option value="Image">Image</option>
+                    <option value="Video">Video</option>
+                    <option value="Article">Article</option>
+
+                </select>
+            </mat-form-field>
+        </div>
+
+        <div class="types-donnees">
+            <mat-form-field appearance="fill">
+                <mat-label>Concurrents</mat-label>
+                <select formControlName="competitorName" matNativeControl required>
+                    <option *ngFor="let names of apiCompititors | async" value="{{ names.nom_societe }}">{{
+                        names.nom_societe
+                        }}
+                    </option>
+                </select>
+            </mat-form-field>
+        </div>
+
+        <div class="types-donnees">
+            <mat-form-field appearance="fill">
+                <mat-label>Enter a date range</mat-label>
+                <mat-date-range-input [rangePicker]="picker">
+                    <input matStartDate formControlName="start" placeholder="Start date">
+                    <input matEndDate formControlName="end" placeholder="End date">
+                </mat-date-range-input>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-date-range-picker #picker></mat-date-range-picker>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="btn-search">
+        <button mat-raised-button color="primary">
+            <mat-icon>search</mat-icon>
+            Consulter
+        </button>
+    </div>
+
+</form>
+
+<mat-card *ngFor="let post of posts" class="posts-container">
+    <img *ngIf="post.type == 'Image'" mat-card-image [src]="post.post_link">
+    <video *ngIf="post.type == 'Video'" mat-card-image controls>
+        <source [src]="post.post_link" type="video/mp4">
+    </video>
+    <mat-card-content>
+        <p>{{post.post_text }}</p>
+        <a *ngIf="post.type == 'Article'" [href]="post.post_link" target="_blank">Lire </a>
+    </mat-card-content>
+    <mat-card-actions>
+        <button color={{couleur}} mat-button (click)="sendRegarder(post.post_link)">À regarder plus
+            tard</button>
+    </mat-card-actions>
+</mat-card>
+<!-- class="ahh" -->

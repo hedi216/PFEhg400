@@ -1,0 +1,64 @@
+<mat-drawer-container class="user-container">
+    <mat-drawer mode="side" opened>
+        <img src="assets/logo.png" />
+        <!-- <app-user-card></app-user-card> -->
+        <div class="btn-navigation">
+            <a routerLink="/dashboard">
+                <button> Listes Concurrents</button>
+            </a>
+            <a routerLink="/dashboard/activite">
+                <button> Activités recentes</button>
+            </a>
+            <a routerLink="/dashboard/aregarder">
+                <button> A regarder plus tard</button>
+            </a>
+        </div>
+
+        <!--  <div class="btn-container">
+            <button mat-raised-button color="primary" (click)="logout()">
+                <mat-icon>logoutoutlined</mat-icon>
+                Logout
+            </button>
+        </div> -->
+
+    </mat-drawer>
+    <mat-drawer-content>
+
+        <div class="header">
+            <div *ngIf="user" class="user-card">
+                <ngx-avatar (click)="toogletag()" [name]="user.fullName" bgColor="#044C9C" size="50"></ngx-avatar>
+
+
+
+                <!-- <div class="info">
+                    <b>{{user.fullName}}</b>
+                    <small>{{user.email}}</small>
+                    <h3>Utilisateur</h3>
+                </div>
+                  <button mat-raised-button color="primary" (click)="logout()">
+                <mat-icon>logoutoutlined</mat-icon>
+                Logout
+            </button>
+ -->
+
+            </div>
+
+
+        </div>
+        <div *ngIf="showMe">
+            <div *ngIf="user" class="ghaith">
+                <b>{{user.fullName}}</b>
+                <small>{{user.email}}</small>
+                <button (click)="logout()" mat-raised-button color="primary">
+                    <mat-icon>logoutoutlined</mat-icon>
+                    Logout
+                </button>
+            </div>
+        </div>
+
+
+
+
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>

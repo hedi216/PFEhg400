@@ -1,0 +1,16 @@
+<mat-drawer-container class="adminstrator-container">
+    <mat-drawer mode="side" opened>
+        <img src="assets/logo.png" />
+        <app-admin-user-card></app-admin-user-card>
+        <div class="btn-container">
+            <button mat-raised-button color="primary" (click)="logout()">
+                <mat-icon>logoutoutlined</mat-icon>
+                Logout
+            </button>
+        </div>
+
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
